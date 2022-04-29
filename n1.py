@@ -65,10 +65,7 @@ while True:
     # collision paddle
     if ball.colliderect(paddle) and dy > 0:
         dx, dy = detect_collision(dx, dy, ball, paddle)
-        # if dx > 0:
-        #     dx, dy = (-dx, -dy) if ball.centerx < paddle.centerx else (dx, -dy)
-        # else:
-        #     dx, dy = (-dx, -dy) if ball.centerx >= paddle.centerx else (dx, -dy)
+      
     # collision blocks
     hit_index = ball.collidelist(block_list)
     if hit_index != -1:
